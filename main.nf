@@ -97,7 +97,7 @@ process delta {
         path('delta.fasta.gz')
 
     """
-    metagraph assemble -v ${graph} --unitigs -a ${annotation} --diff-assembly-rules ${rules} -o delta 2> log.txt
+    metagraph assemble -v ${graph} --unitigs -p ${task.cpus} -a ${annotation} --diff-assembly-rules ${rules} -o delta 2> log.txt
     """
 }
 
