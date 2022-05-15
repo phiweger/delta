@@ -105,7 +105,7 @@ process delta {
 workflow {
     genomes = channel.fromPath(params.genomes)
                      .splitCsv(header: false)
-                     .map{ name, label, seq -> seq }
+                     .map{ name, seq -> seq }
 
     rules = channel.fromPath(params.delta)
 
